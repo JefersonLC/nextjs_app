@@ -1,0 +1,64 @@
+.button {
+  justify-self: end;
+  width: 2rem;
+  font-size: 1.25rem;
+  color: var(--color5);
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color1);
+}
+
+.div {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.show {
+  display: block;
+}
+
+.div:not(.show) {
+  display: none;
+}
+
+.li {
+  margin-top: 0.75rem;
+}
+
+.a {
+  color: var(--color5);
+}
+
+.a:hover {
+  color: var(--color1);
+}
+
+@media screen and (min-width: 992px) {
+  .button {
+    display: none;
+  }
+
+  .div:not(.show) {
+    display: flex;
+    align-items: center;
+  }
+
+  .div {
+    width: auto;
+    margin-left: 5rem;
+  }
+
+  .ul {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .li {
+    margin: 0rem;
+  }
+}

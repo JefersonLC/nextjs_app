@@ -1,0 +1,21 @@
+:root {
+  --color1: #b5ffe1;
+  --color2: #93e5ab;
+  --color3: #65b891;
+  --color4: #4e878c;
+  --color5: #00241b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

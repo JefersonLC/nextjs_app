@@ -1,0 +1,18 @@
+.card {
+  border-radius: .35rem;
+  border: 1.5px solid #999;
+}
+
+.body{
+  padding: 1rem;
+
+}
+
+.h5 {
+  font-size: 1.55rem;
+}
+
+.div {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,29 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color3);
+  padding: .75rem 1rem;
+}
+
+.nav-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  color: var(--color5);
+  font-size: 1.75rem;
+}
+
+.nav-brand:hover {
+  color: var(--color1);
+}
+
+@media screen and (min-width: 992px) {
+  .nav-container {
+    width: 75%;
+  }
+}
