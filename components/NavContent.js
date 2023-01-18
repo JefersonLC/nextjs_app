@@ -10,12 +10,17 @@ export default function NavContent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 992) {
+    function handleResize() {
+      const maxWidth = 992;
+      if (window.innerWidth >= maxWidth) {
         setVisible(false);
       }
-    });
-  });
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
