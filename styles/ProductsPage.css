@@ -3,3 +3,22 @@
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
+.card {
+  border-radius: .35rem;
+  border: 1.5px solid #999;
+}
+
+.card-body{
+  padding: 1rem;
+
+}
+
+.card-body-title {
+  font-size: 1.55rem;
+}
+
+.card-body-info {
+  display: flex;
+  gap: 1rem;
+}
