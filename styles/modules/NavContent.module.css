@@ -1,7 +1,6 @@
 .button {
   justify-self: end;
   width: 2rem;
-  font-size: 1.25rem;
   color: var(--color5);
   background-color: inherit;
   border: none;
