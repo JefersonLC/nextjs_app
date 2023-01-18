@@ -1,7 +1,8 @@
-export default function Page() {
+export default function RootPage() {
   return (
-    <nav>
-
-    </nav>
+    <div>
+    <br /><br /><br /><br /><br /><br />
+      <p>Soy la pagina HOME</p>
+    </div>
   );
 }

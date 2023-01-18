@@ -1,5 +1,5 @@
 
-export default function ProductsPageLayout({ children }) {
+export default function ProductsLayout({ children }) {
   return (
     <>
       <div>

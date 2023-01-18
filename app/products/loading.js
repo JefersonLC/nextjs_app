@@ -1,6 +1,6 @@
-export default function LoadingPage() {
+export default function ProductsLoading() {
   return (
-    <div>
+    <div style={{paddingTop: 200}}>
       cargando....
     </div>
   );
