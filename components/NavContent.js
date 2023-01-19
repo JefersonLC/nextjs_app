@@ -25,7 +25,12 @@ export default function NavContent() {
   return (
     <>
       <button onClick={() => setVisible(!visible)} className={style.button}>
-        <FontAwesomeIcon icon={faBars} className={style.icon} />
+        <FontAwesomeIcon
+          icon={faBars}
+          width={20}
+          height={20}
+          className={style.icon}
+        />
       </button>
       <div className={style.div + ' ' + (visible ? style.show : '')}>
         <ul className={style.ul}>
