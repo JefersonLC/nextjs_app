@@ -1,10 +1,10 @@
 .button {
-  justify-self: end;
   width: 2rem;
   color: var(--color5);
   background-color: inherit;
   border: none;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .button:hover {
