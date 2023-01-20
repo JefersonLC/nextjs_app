@@ -7,24 +7,26 @@ import { useEffect, useState } from 'react';
 import style from '../styles/modules/NavContent.module.css';
 
 export default function NavContent() {
-  const [visible, setVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     function handleResize() {
       const maxWidth = 992;
       if (window.innerWidth >= maxWidth) {
-        setVisible(false);
+        setIsVisible(false);
       }
     }
     window.addEventListener('resize', handleResize);
     return () => {
+      setIsLoading(false);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <>
-      <button onClick={() => setVisible(!visible)} className={style.button}>
+      <button onClick={() => setIsVisible(!isVisible)} className={style.button}>
         <FontAwesomeIcon
           icon={faBars}
           width={20}
@@ -32,13 +34,13 @@ export default function NavContent() {
           className={style.icon}
         />
       </button>
-      <div className={style.div + ' ' + (visible ? style.show : '')}>
+      <div className={style.div + ' ' + (isVisible ? style.show : '')}>
         <ul className={style.ul}>
           <li className={style.li}>
             <Link
               href="/"
               className={style.a}
-              onClick={() => setVisible(false)}
+              onClick={() => setIsVisible(false)}
             >
               Home
             </Link>
@@ -47,7 +49,7 @@ export default function NavContent() {
             <Link
               href="/products"
               className={style.a}
-              onClick={() => setVisible(false)}
+              onClick={() => setIsVisible(false)}
             >
               Products
             </Link>
