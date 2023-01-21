@@ -10,7 +10,7 @@
   background-color: var(--color3);
   color: var(--color5);
   box-shadow: 0 0 10px 2px var(--color5);
-  border-radius: var(--border)
+  border-radius: var(--border);
 }
 
 .form-header {
@@ -20,7 +20,7 @@
 }
 
 .form-body {
-  padding: 1rem 2.5rem;
+  padding: 1rem;
 }
 
 .form-control {
@@ -70,4 +70,10 @@
 
 .form-button:hover {
   background-color: var(--color1);
+}
+
+@media screen and (min-width: 576px) {
+  .form-body {
+    padding: 1rem 2.5rem;
+  }
 }

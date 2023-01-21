@@ -1,0 +1,48 @@
+.divAlert{
+  font-size: 12.5px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border);
+  background-color: #fff;
+  border: 2px solid red;
+  box-shadow: 0 0 5px 1px var(--color5);
+}
+
+.divIcon {
+  padding: .75rem;
+  border-right: 2px solid red;
+  color: red
+}
+
+.divMessage {
+  padding: .75rem;
+}
+
+.divButton {
+  padding: .75rem;
+}
+
+.button {
+  border:none;
+  background-color: #fff;
+  cursor:pointer;
+  color: #222;
+  font-size: 12.5px;
+}
+
+.button:hover {
+  color: #777
+}
+
+@media screen and (min-width: 576px) {
+  .divAlert{
+    font-size: 1rem;
+    top: 10rem;
+    left: 2rem;
+  }
+  .button {
+    font-size: 1rem;
+  }
+}
