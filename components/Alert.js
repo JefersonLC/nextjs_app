@@ -1,3 +1,5 @@
+'use client'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import style from '../styles/modules/Alert.module.css';
@@ -8,7 +10,7 @@ export default function Alert({ message }) {
   useEffect(() => {
     setTimeout(() => {
       removeError();
-    }, 3500);
+    }, 5000);
   }, []);
 
   const { removeError } = useLoginStore();
