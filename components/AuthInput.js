@@ -1,7 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ErrorMessage, Field } from 'formik';
+'use client'
 
-export default function AuthInput({ icon, name, type, placeholder }) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ErrorMessage } from 'formik';
+
+export default function AuthInput({ icon, name, children }) {
   return (
     <div className="form-control">
       <div className="form-input">
@@ -11,12 +13,7 @@ export default function AuthInput({ icon, name, type, placeholder }) {
           width={20}
           height={20}
         />
-        <Field
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          className="input"
-        />
+        {children}
       </div>
       <ErrorMessage
         name={name}
