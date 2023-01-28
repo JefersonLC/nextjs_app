@@ -1,12 +1,5 @@
-import RegisterForm from '../../../components/RegisterForm';
+import AuthContainer from '../../../components/AuthContainer';
 
 export default function RegisterPage() {
-  return (
-    <>
-      <div className="form-header">REGISTER</div>
-      <div className="form-body">
-        <RegisterForm />
-      </div>
-    </>
-  );
+  return <AuthContainer isLogin={false} />;
 }
