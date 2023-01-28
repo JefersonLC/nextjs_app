@@ -1,6 +1,6 @@
 'use client';
 
-import { Form, Formik } from 'formik';
+import { Form, Formik, Field } from 'formik';
 import {
   faUser,
   faUserPlus,
@@ -9,6 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { registerSchema } from '../schemas/authSchemas';
 import AuthInput from './AuthInput';
+import { useState, useRef } from 'react';
 
 const registerValues = {
   name: '',
@@ -16,6 +17,7 @@ const registerValues = {
   email: '',
   password: '',
   repeat_password: '',
+  image: null,
 };
 
 const registerInputs = [
@@ -48,20 +50,21 @@ const registerInputs = [
     name: 'repeat_password',
     type: 'password',
     placeholder: 'Confirm password',
-  },
+  }
 ];
 
 export default function RegisterForm() {
+  let first = useRef()
   return (
     <Formik
       initialValues={registerValues}
-      validationSchema={registerSchema}
+      // validationSchema={registerSchema}
       onSubmit={(values) => {
-        console.log(values);
+        console.log(first.current.files);
       }}
     >
-      <Form className="form">
-        {registerInputs.map((input, index) => (
+      <Form className="form" encType="multiplat/form-data">
+        {/* {registerInputs.map((input, index) => (
           <AuthInput
             key={index}
             icon={input.icon}
@@ -69,7 +72,8 @@ export default function RegisterForm() {
             type={input.type}
             placeholder={input.placeholder}
           />
-        ))}
+        ))} */}
+        <input ref={first} name='image' type='file' />
         <div className="form-control form-help">
           <p>Are you already registered?</p>
         </div>
