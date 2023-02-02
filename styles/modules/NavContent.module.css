@@ -16,12 +16,12 @@
   flex-grow: 1;
 }
 
-.show {
-  display: block;
-}
-
 .div:not(.show) {
   display: none;
+}
+
+.show {
+  display: block;
 }
 
 .li {
