@@ -8,7 +8,6 @@ import style from '../styles/modules/NavContent.module.css';
 
 export default function NavContent() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     function handleResize() {
@@ -19,7 +18,6 @@ export default function NavContent() {
     }
     window.addEventListener('resize', handleResize);
     return () => {
-      setIsLoading(false);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
