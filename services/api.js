@@ -1,7 +1,7 @@
-const path = 'http://localhost:3001/api/store';
+const PATH = 'http://localhost:3001/api/store';
 
 export async function getProducts() {
-  const res = await fetch(`${path}/products`, {
+  const res = await fetch(`${PATH}/products`, {
     next: { revalidate: 120 },
   });
   if (!res.ok) {
@@ -11,9 +11,20 @@ export async function getProducts() {
   return products;
 }
 
+export async function getCategories() {
+  const res = await fetch(`${PATH}/categories`, {
+    next: { revalidate: 120 },
+  });
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  const categories = await res.json();
+  return categories;
+}
+
 export async function loginUser(user) {
   const bodyContent = JSON.stringify(user);
-  const res = await fetch(`${path}/login`, {
+  const res = await fetch(`${PATH}/login`, {
     method: 'POST',
     body: bodyContent,
     headers: {
