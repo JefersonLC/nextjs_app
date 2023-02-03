@@ -1,5 +1,4 @@
-import '../../styles/ProductsPage.css';
-import { getProducts } from '../../services/api';
+import { getProducts } from '../../../services/api';
 
 export default async function ProductsPage() {
   const products = await getProducts();
